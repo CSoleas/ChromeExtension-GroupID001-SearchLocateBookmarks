@@ -1,0 +1,567 @@
+* {
+    user-select: none;
+}
+
+body {
+    margin: 0;
+}
+
+.loadingwindow {
+    height: 460px;
+    padding: 4px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Background {
+    box-shadow: 0px 2px #d2d4d4;
+    margin: auto;
+    width: 440px;
+    height: 513px;
+    padding-right: 3px;
+    padding-left: 3px;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* MODAL ONE BUTTONS AREA */
+button {
+    position: relative;
+    overflow: hidden;
+}
+
+/* ANIMATION */
+button span {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #d2e4fb;
+
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    margin-left: -50px;
+
+    animation: ripple 1s;
+    opacity: 0;
+}
+
+@keyframes ripple {
+    from {
+        opacity: 1;
+        transform: scale(0);
+    }
+    to {
+        opacity: 0;
+        transform: scale(18);
+    }
+}
+
+.detailsButton:focus,
+.locateButton:focus,
+.openButton:focus,
+.saveButtonSct:focus,
+.LocateCloseButton:focus,
+.DetailsModalCloseButton:focus {
+    outline: 2px solid #1a73e8;
+    border: 1px solid white;
+    border-radius: 4px;
+    outline-color: #1a73e8;
+}
+
+Button:focus {
+    outline-color: #1a73e8;
+}
+
+.openButton:hover,
+.saveButtonSct:hover,
+.LocateCloseButton:hover,
+.DetailsModalCloseButton:hover {
+    background-color: #2f7de3;
+    /* transition: 0.7s; */
+    cursor: default;
+}
+
+.sortMenuButton:hover,
+.locateButton:hover,
+.cancelButton:hover,
+.detailsButton:hover {
+    background-color: #ebf3fd;
+    transition: 0.3s;
+    cursor: default;
+}
+
+/* EXTRA */
+
+h2 {
+    margin-bottom: 4px;
+}
+
+.left {
+    margin-right: 10px;
+    float: left;
+    width: 300px;
+    padding: 0px;
+}
+
+.right {
+    margin-left: 10px;
+    float: left;
+    width: 160px;
+    padding: 0px;
+}
+
+.bottom {
+    clear: both;
+    padding-top: 10px;
+}
+
+.max {
+    width: 2000px;
+    height: 2000px;
+}
+
+/* SORTED BOX */
+.SortedBackgroundPage {
+    box-shadow: 0px 2px #d2d4d4;
+    margin-left: auto;
+    margin-right: auto;
+    width: 516px;
+    height: 545px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    padding-bottom: 13px;
+    padding-left: 23px;
+    padding-right: 23px;
+    padding-top: 18px;
+}
+
+.SortedHeader {
+    color: #1a73e8;
+    font-weight: 600;
+    margin: 0px 0px 18px 2px;
+    width: 300px;
+    font-size: 15px;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.SortedContainer {
+    width: 514px;
+    box-sizing: border-box;
+    float: left;
+}
+
+.SortedBox {
+    height: 460px;
+    width: 400px;
+    border: 1px solid #e0e1e5;
+    white-space: nowrap;
+    margin-right: auto;
+    cursor: default;
+    box-sizing: border-box;
+    float: left;
+}
+
+.SortedBoxFakeFocus {
+    height: 460px;
+    width: 400px;
+    border: 1px solid #1a73e8;
+    outline: 1px solid #1a73e8;
+    white-space: nowrap;
+    margin-right: auto;
+    cursor: default;
+    box-sizing: border-box;
+    float: left;
+}
+
+.SortedBox:focus-within {
+    border: 1px solid #1a73e8;
+    outline: 1px solid #1a73e8;
+}
+
+.SortedButtonsBox {
+    height: 472px;
+    width: 100px;
+    padding-left: 20px;
+    float: left;
+    box-sizing: border-box;
+}
+
+.SortedInput {
+    margin-bottom: 8px;
+    border: 1px solid #e0e1e5;
+    outline-color: #1a73e8;
+    border-radius: 3px;
+    padding: 6px 8px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 12px;
+    height: 17px;
+    width: 384px;
+    padding-bottom: 9px;
+}
+
+.sortMenuButton {
+    background-color: white;
+    border: 1px solid #e0e1e5;
+    border-radius: 4px;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 550;
+
+    width: 96px;
+    height: 32px;
+
+    color: #1a73e8;
+    padding-bottom: 3px;
+
+    margin-bottom: 230px;
+}
+
+.openButton {
+    background-color: #1a73e8;
+    border: 1px solid #1a73e8;
+    border-radius: 4px;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 550;
+
+    width: 96px;
+    height: 32px;
+
+    color: white;
+    padding-bottom: 3px;
+    margin-bottom: 15px;
+}
+
+.locateButton {
+    background-color: white;
+    border: 1px solid #e0e1e5;
+    border-radius: 4px;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 550;
+
+    width: 96px;
+    height: 32px;
+
+    color: #1a73e8;
+    padding-bottom: 3px;
+    margin-bottom: 15px;
+}
+
+.cancelButton {
+    background-color: white;
+    border: 1px solid #e0e1e5;
+    border-radius: 4px;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 550;
+
+    width: 96px;
+    height: 32px;
+
+    color: #1a73e8;
+    padding-bottom: 3px;
+    margin-bottom: 15px;
+}
+
+.detailsButton {
+    background-color: white;
+    border: 1px solid #e0e1e5;
+    border-radius: 4px;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 550;
+
+    width: 96px;
+    height: 32px;
+
+    color: #1a73e8;
+    padding-bottom: 3px;
+    margin-bottom: 15px;
+}
+
+.SortbtnContainer {
+    border-bottom: 1px solid #e0e1e5;
+    position: absolute;
+    left: 443px;
+    top: 130px;
+    z-index: 1;
+}
+
+.SortbtnContainer button {
+    float: none;
+    display: block;
+
+    background-color: white;
+    border: 0px solid #e0e1e5;
+    border-left: 1px solid #e0e1e5;
+    border-right: 1px solid #e0e1e5;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 550;
+
+    width: 94px;
+    height: 32px;
+
+    color: #1a73e8;
+    padding-bottom: 3px;
+    margin-bottom: 0px;
+    margin-left: 1px;
+}
+
+.SortbtnContainer button:hover {
+    background-color: #ebf3fd;
+    border-left: 1px solid #1a73e8;
+}
+
+.SortbtnContainer button:focus {
+    border-left: 1px solid #1a73e8;
+    outline: none;
+    background-color: #ebf3fd;
+}
+
+/* RIGHT CLICK MENU */
+
+.rightClickMenu {
+    position: fixed;
+    z-index: 2;
+    width: 130px;
+    border: 1px solid #e0e1e5;
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.5);
+    background: #ffffff;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 13px;
+}
+
+.rightClickMenuOption {
+    z-index: 2;
+    color: black;
+    cursor: default;
+    background: #ffffff;
+    padding-left: 25px;
+    padding-top: 3px;
+    padding-bottom: 4px;
+}
+
+.rightClickMenuOption:hover {
+    background: #e8e8e9;
+}
+
+.backdrop {
+    position: absolute;
+    opacity: 0;
+    z-index: 1;
+    height: 576px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 562px;
+    left: 0;
+    top: 0;
+}
+
+.listFavicon {
+    margin-left: 3px;
+    margin-bottom: 3px;
+    vertical-align: middle;
+    height: 16px;
+    width: 16px;
+}
+
+.unselected {
+    /* width : 377px; */
+    font-size: 0;
+}
+
+.List {
+    margin: 0;
+}
+
+.nbTable {
+    border-collapse: collapse;
+}
+
+.bookmarkTitle {
+    width: 354px;
+    padding-left: 5px;
+    vertical-align: middle;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 13px;
+    height: 22px;
+    padding-top: 2px;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.nbLocate {
+    width: 354px;
+    padding-left: 5px;
+    vertical-align: middle;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 13px;
+    height: 22px;
+    padding-top: 2px;
+    display: inline-block;
+}
+
+.unselectedButFocused {
+    box-shadow: 0px 0px 0px 1px #99d1ff inset;
+    /* width : 378px; */
+    font-size: 0;
+}
+
+.unselectedButFocused:focus {
+    box-shadow: 0px 0px 0px 1px #99d1ff inset;
+    border: none;
+    outline: none;
+}
+
+.selected {
+    background: #cce8ff;
+    font-size: 0;
+}
+
+.selected:focus {
+    box-shadow: 0px 0px 0px 1px #99d1ff inset;
+    background: #cce8ff;
+    border: none;
+    outline: none;
+}
+
+.selectedAndFocused {
+    box-shadow: 0px 0px 0px 1px #99d1ff inset;
+    background: #cce8ff;
+    font-size: 0;
+}
+
+.selectedAndFocused:focus {
+    box-shadow: 0px 0px 0px 1px #99d1ff inset;
+    background: #cce8ff;
+    display: block;
+    border: none;
+    outline: none;
+}
+
+/* LOCATE TAB */
+
+.LocateTab {
+    position: fixed;
+    z-index: 2;
+    border: 1px solid #e0e1e5;
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.5);
+    background: #ffffff;
+    height: 240px;
+    width: 340px;
+    margin-left: 60px;
+    margin-top: 70px;
+    outline: 1px solid #1a73e8;
+    border: 1px solid #1a73e8;
+}
+
+.LocateBox {
+    height: 220px;
+    width: 322px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 6px;
+    margin-right: 6px;
+
+    z-index: 2;
+    cursor: default;
+    overflow-x: auto;
+    overflow-y: auto;
+    white-space: nowrap;
+}
+
+.LocateCloseButton {
+    background-color: #1a73e8;
+    border: 1px solid #1a73e8;
+    border-radius: 4px;
+    box-shadow: 1, 1, 1, 0, 5;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 550;
+    height: 22px;
+    padding-bottom: 1px;
+    width: 66px;
+    z-index: 2;
+    position: absolute;
+    left: 276px;
+    top: 243px;
+}
+
+.imgFolder {
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 2px;
+    height: 20px;
+    width: 17px;
+}
+
+.faviLocate {
+    height: 16px;
+    width: 16px;
+    margin-top: 3px;
+    margin-left: 4px;
+    margin-right: 3px;
+}
+
+.DetailsModalFrame {
+    position: fixed;
+    z-index: 2;
+    border: 1px solid #e0e1e5;
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.5);
+    background: #ffffff;
+    height: 89px;
+    width: 420px;
+    margin-left: 50px;
+    margin-top: 70px;
+    outline: 1px solid #1a73e8;
+    border: 1px solid #1a73e8;
+    overflow: auto;
+    padding: 5px;
+}
+
+.DetailsModalDate,
+.DetailsModalURL,
+.DetailsModalTitle {
+    width: 354px;
+    padding-left: 5px;
+    vertical-align: middle;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 13px;
+    height: 22px;
+    padding-top: 2px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.DetailsModalCloseButton {
+    background-color: #1a73e8;
+    border: 1px solid #1a73e8;
+    border-radius: 4px;
+    box-shadow: 1, 1, 1, 0, 5;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 550;
+    height: 22px;
+    padding-bottom: 1px;
+    width: 66px;
+    z-index: 2;
+    position: absolute;
+    left: 438px;
+    top: 271px;
+}
